@@ -8,6 +8,7 @@ import Portfolio from "./Portfolio";
 import Home from "../Home";
 import { FaGithub, FaLinkedin, FaStarOfLife } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
+import Pdf from "../../Items/cv.pdf";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,17 +28,19 @@ const Navbar = () => {
         </Logo>
         <LinksContainer>
           <StyledLink to="/" onClick={handleMenuOpen}>
-            ABOUT
+            <span>&#x3c;</span>About
+            <span>/&#x3e;</span>
           </StyledLink>
           <StyledLink to="/portfolio" onClick={handleMenuOpen}>
-            PORTFOLIO
+            <span>&#x3c;</span>Portfolio<span>/&#x3e;</span>
           </StyledLink>
           <StyledLink to="/blog" onClick={handleMenuOpen}>
-            BLOG
+            <span>&#x3c;</span>Blog<span>/&#x3e;</span>
           </StyledLink>
-          <StyledLink to="/cv" onClick={handleMenuOpen}>
-            CV
-          </StyledLink>
+
+          <CvLink href={require("../../Items/cv.pdf")} target="_blank">
+            <span>&#x3c;</span>CV<span>/&#x3e;</span>
+          </CvLink>
         </LinksContainer>
         <SocialIcons>
           <SocialLinks href="https://github.com/kitsunne">
@@ -74,13 +77,13 @@ const Menu = styled.div`
     cursor: pointer;
     z-index: 100;
   }
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 480px) {
     top: 5px;
     right: 5px;
   }
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 320px) {
     top: 5px;
-    right: 5px;
+    right: 3px;
   }
 `;
 
@@ -93,7 +96,7 @@ const NavbarWrapper = styled.div`
   top: 0;
   padding: 5px 160px;
   z-index: 1000;
-  border: 1px solid black;
+
   @media screen and (max-width: 1024px) {
     padding: 30px 0;
     font-size: 16px;
@@ -111,7 +114,7 @@ const NavbarWrapper = styled.div`
     ${(props) =>
       props.isMenuOpen
         ? `
-      background: #1ccbb1;
+      background: #11111b;
       left: 0;
       opacity: 1;
       position: absolute;
@@ -126,18 +129,17 @@ const NavbarWrapper = styled.div`
 `;
 const Logo = styled.h1`
   font-size: 30px;
-  color: white;
+  color: #e1e3ef;
+  cursor: pointer;
+
   #logo {
-    color: #16c79e;
-    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff,
-      0 0 40px #00ff00, 0 0 80px #00ff00, 0 0 90px #00ff00, 0 0 100px #00ff00,
-      0 0 150px #00ff00;
+    color: #60b09d;
     width: 15px;
   }
 `;
 const LinksContainer = styled.div`
   display: block;
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 768px) {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -149,44 +151,73 @@ const StyledLink = styled(Link)`
   margin: 0 20px;
   transition: all 0.2s ease-in-out;
   position: relative;
-  color: white;
+  color: #5b5c66;
+  font-weight: lighter;
   text-decoration: none;
   font-size: 1.1rem;
-  text-transform: capitalize;
   letter-spacing: 5px;
   border-radius: 4px;
-  padding:5px;
-  &:hover {
-    &:hover {
-    background: #16c79e;
-    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff,
-      0 0 40px #00ff00, 0 0 80px #00ff00, 0 0 90px #00ff00, 0 0 100px #00ff00,
-      0 0 150px #00ff00;
-    color: white;
+  padding: 5px;
+  font-size: 18px;
+  span {
+    font-size: 18px;
+    font-weight: bold;
   }
-    
+
+  &:hover {
+    color: white;
+    transition: all 0.3s linear;
+    span {
+      color: #c863be;
+    }
+  }
 `;
+
 const SocialIcons = styled.ul`
   display: flex;
   list-style: none;
 
   a {
-    color: white;
+    color: #5b5c66;
     cursor: pointer;
     font-size: 30px;
     margin: 15px;
-    color: white;
-  }
-  &:hover a {
-    color: pink;
-    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff,
-      0 0 40px #ff00de, 0 0 80px #ff00de, 0 0 90px #ff00de, 0 0 100px #ff00de,
-      0 0 150px #ff00de;
+    &:hover {
+      color: #f37a53;
+      transition: all 0.3s linear;
+      transform: scale(1.5);
+    }
   }
 `;
 const SocialLinks = styled.a`
-  margin: 0 0.5rem;s
+  margin: 0 0.5rem;
   text-decoration: none;
+`;
+
+const CvLink = styled.a`
+  margin: 0 20px;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  color: #5b5c66;
+  font-weight: lighter;
+  text-decoration: none;
+  font-size: 1.1rem;
+  letter-spacing: 5px;
+  border-radius: 4px;
+  padding: 5px;
+  font-size: 18px;
+  span {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  &:hover {
+    color: white;
+    transition: all 0.3s linear;
+    span {
+      color: #c863be;
+    }
+  }
 `;
 
 export default Navbar;

@@ -1,159 +1,192 @@
 import React from "react";
 import styled from "styled-components";
-import logo from ".././Images/logo.svg";
+import png from "../Images/sticker.png";
 
 const Main = () => {
   return (
     <MainWrapper>
-      <PresentationalWrapper>
-        <JobInformation>
-          <FieldInfo>
-            <p>
-              const <span style={{ color: "#C95A89" }}>human</span> = &#x7B;
-              <br />
-              <br />
-              name:
-              <span style={{ color: "#1ccbb1" }}>“Daria Kiseliova”</span>;<br />
-              position:
-              <span style={{ color: "#1ccbb1" }}>"Frontend developer"</span>;
-              <br />
-              stack:{" "}
-              <span style={{ color: "#1ccbb1" }}>"JS,React,Typescript"</span>;
-              <br />
-              <span style={{ color: "#C95A89" }}>coding()</span>
-              <br />
-              <br />
-              &#125;;
-            </p>
-          </FieldInfo>
-        </JobInformation>
-        <ImageContainer>
-          <img src={logo}></img>
-        </ImageContainer>
-      </PresentationalWrapper>
+      <FieldInfo>
+        <p>
+          const <span style={{ color: "#F37A53" }}>human</span> ={" "}
+          <span style={{ color: "#C863BE" }}> &#x7B; </span>
+        </p>
+        <p>
+          name:
+          <span style={{ color: "#60B09D" }}>“Daria Kiseliova”</span>;
+        </p>
+        <p>
+          position:
+          <span style={{ color: "#60B09D" }}>"Frontend Developer"</span>;
+        </p>
+        <p>
+          stack: <span style={{ color: "#60B09D" }}>"JS,React,Typescript"</span>
+          ;
+        </p>
+        <p>
+          <span style={{ color: "#60B09D" }}>.coding();</span>
+        </p>
+        <p>
+          <span style={{ color: "#C863BE" }}> &#125;</span>;
+        </p>
+      </FieldInfo>
+
+      <ImageContainer>
+        <img src={png}></img>
+      </ImageContainer>
     </MainWrapper>
   );
 };
 
 const MainWrapper = styled.main`
-  height: 75vh;
+  height: 80vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   color: white;
   margin: auto;
-  width: 78%;
+  width: 72%;
   @media screen and (max-width: 1024px) {
     width: 91%;
   }
   @media screen and (max-width: 768px) {
+    width: 85%;
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+    top: 60%;
+    transform: translate(0, -50%);
+  }
+  @media screen and (max-width: 480px) {
     width: 90%;
     flex-direction: column;
-    justify-content: flex-start;
-    text-align: center;
+    justify-content: center;
+    position: absolute;
+    top: 69%;
+    transform: translate(0, -50%);
+  }
+  @media screen and (max-width: 320px) {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
   }
 `;
 
-const PresentationalWrapper = styled.div`
-  display: flex;
-  margin: 0 auto;
-  @media screen and (max-width: 1024px) {
-  }
+const FieldInfo = styled.div`
+  padding: 15px 0 20px 60px;
+  line-height: 45px;
+  padding-left: 40px;
+  align-self: center;
+  border-left: 5px solid #5b5c66;
+
   @media screen and (max-width: 768px) {
-    flex-direction: column;
+    padding: 15px 0;
   }
-  @media screen and (max-width: 400px) {
-    flex-direction: column;
+  @media screen and (max-width: 480px) {
+    padding-left: 40px;
+    text-align: left;
   }
   @media screen and (max-width: 320px) {
-    flex-direction: column;
+    text-align: left;
   }
-`;
-const FieldInfo = styled.div`
-  display: flex;
-  margin: 0 auto;
-  align-content: center;
-  flex-direction: column;
-  align-items: center;
+
   p {
-    color: white;
-    font-size: 40px;
-    letter-spacing: 4px;
+    font-weight: bold;
+    color: #e1e3ef;
+    font-size: 35px;
+    letter-spacing: 2px;
+    @media screen and (max-width: 1366px) {
+      font-size: 18px;
+      line-height: 40px;
+    }
+    @media screen and (max-width: 1024px) {
+      font-size: 18px;
+      line-height: 29px;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 18px;
+      line-height: 29px;
+    }
+    @media screen and (max-width: 480px) {
+      font-size: 15px;
+      line-height: 20px;
+    }
+    @media screen and (max-width: 320px) {
+      font-size: 10px;
+      line-height: 10px;
+    }
+  }
+  p:nth-child(2) {
+    margin-left: 35px;
+    @media screen and (max-width: 480px) {
+      margin-left: 15px;
+    }
+  }
+  p:nth-child(3) {
+    margin-left: 35px;
+    @media screen and (max-width: 480px) {
+      margin-left: 15px;
+    }
+  }
+  p:nth-child(4) {
+    margin-left: 35px;
+    @media screen and (max-width: 480px) {
+      margin-left: 15px;
+    }
+  }
+  p:nth-child(5) {
+    margin-left: 35px;
+    @media screen and (max-width: 480px) {
+      margin-left: 15px;
+    }
   }
   span {
-    font-size: 40px;
-  }
-`;
-const JobInformation = styled.div`
-  align-self: center;
-  display: flex;
-  align-content: center;
-  padding: 40px 0;
-  font-size: 40px;
-
-  @media screen and (max-width: 1024px) {
-    p,
-    span {
-      font-size: 30px;
+    font-size: 35px;
+    font-weight: bold;
+    @media screen and (max-width: 1366px) {
+      font-size: 18px;
     }
-  }
-  @media screen and (max-width: 768px) {
-    p,
-    span {
-      font-size: 25px;
+    @media screen and (max-width: 1024px) {
+      font-size: 18px;
     }
-    border-left: 0;
-  }
-  @media screen and (max-width: 400px) {
-    p,
-    span {
-      font-size: 20px;
+    @media screen and (max-width: 768px) {
+      font-size: 18px;
     }
-  }
-  @media screen and (max-width: 320px) {
-    p,
-    span {
+    @media screen and (max-width: 480px) {
+      font-size: 15px;
+    }
+    @media screen and (max-width: 320px) {
       font-size: 15px;
     }
   }
 `;
 const ImageContainer = styled.div`
   margin: 0 auto;
-  align-items: center;
-  margin: 55px auto;
-  @media screen and (max-width: 450px) {
-    margin-top: 200px;
-  }
-  @media screen and (max-width: 400px) {
-    margin-top: 170px;
-  }
-  @media screen and (max-width: 320px) {
-    margin-top: 110px;
-  }
+  align-self: flex-end;
 
   img {
-    width: 420px;
-    margin: 55px auto;
-    align-items: center;
-
-    @media screen and (max-width: 1024px) {
-      width: 350px;
+    width: 550px;
+    @media screen and (max-width: 1366px) {
+      width: 400px;
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
       width: 300px;
     }
-    @media screen and (max-width: 450px) {
-      width: 250px;
+    @media screen and (max-width: 768px) {
+      width: 280px;
+      align-self: center;
+      text-align: center;
     }
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 480px) {
       width: 200px;
+      align-self: center;
     }
     @media screen and (max-width: 320px) {
-      width: 150px;
+      width: 120px;
+      align-self: center;
     }
   }
 `;
