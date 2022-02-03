@@ -104,9 +104,10 @@ const NavbarWrapper = styled.div`
   @media screen and (max-width: 768px) {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
-    height: 300px;
-    font-size: 15px;
+    height: 320px;
+    font-size: 17px;
     position: fixed;
     top: 0;
     box-shadow: 5px 5px 20px;
@@ -129,11 +130,12 @@ const NavbarWrapper = styled.div`
 `;
 const Logo = styled.h1`
   font-size: 30px;
+  letter-spacing: 1px;
   color: #e1e3ef;
   cursor: pointer;
 
   #logo {
-    color: #60b09d;
+    color: #4bb49d;
     width: 15px;
   }
 `;
@@ -162,6 +164,7 @@ const StyledLink = styled(Link)`
   span {
     font-size: 18px;
     font-weight: bold;
+    color: #c863be;
   }
 
   &:hover {
@@ -209,6 +212,7 @@ const CvLink = styled.a`
   span {
     font-size: 18px;
     font-weight: bold;
+    color: #c863be;
   }
 
   &:hover {

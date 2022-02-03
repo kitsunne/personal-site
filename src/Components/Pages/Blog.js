@@ -22,9 +22,10 @@ const BlogWrapper = styled.div`
   justify-content: center;
   align-items: center;
   padding-top: 150px;
-
+  background-color: #11111b;
   @media screen and (max-width: 480px) {
-    padding-top: 160px;
+    padding-top: 90px;
+    height: 300px;
   }
 `;
 const Text = styled.div`
@@ -33,7 +34,9 @@ const Text = styled.div`
     font-size: 30px;
     font-family: "Raleway", sans-serif;
     letter-spacing: 6px;
+    margin: 0;
     @media screen and (max-width: 480px) {
+      padding-top: 20px;
       font-size: 20px;
     }
   }

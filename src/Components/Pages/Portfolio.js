@@ -16,25 +16,36 @@ const portfolioData = [
         <div>There are 10 working applications:</div>
         <br />
         <div>- Modal Window, which you can open and close.</div>
-
-        <div>- QA block, which has written in a way of Accordion.</div>
-
+        <div>
+          - QA block, which has written in a way of Accordion, vertically
+          stacked list of items. Where each can be collapsed to reveal the
+          content associated with that item.
+        </div>
         <div>
           - Reviews slider, where you can swipe reviews or choose random one.
         </div>
 
-        <div>- Dish menu with choice by category</div>
+        <div>
+          - Dish menu that allows to choose dishes based on certain
+          criteria/category.
+        </div>
 
         <div>
-          - Grocery List, where you can write down your wish, edit them, delete
-          them or clean everything at all.
+          - Grocery List, like todo list making app. Here you can add, edit,
+          delete the item or clean everything at all.
         </div>
 
         <div>- Simple photo slider.</div>
 
-        <div>- Information tabs </div>
+        <div>
+          - Information tabs. With the informational items, each item can be
+          collapsed to reveal the content associated with that item.
+        </div>
 
-        <div>- Event countdown timer. </div>
+        <div>
+          - A virtual clock that counts down from a certain date to indicate the
+          end oa an event
+        </div>
 
         <div>- Video player.</div>
 
@@ -47,19 +58,20 @@ const portfolioData = [
     technologies: "React / Styled Components",
   },
   {
-    title: "Social Network",
+    title: "Social Network 'BeSocial' ",
     image: require("../../Images/social-network.png"),
     demoLink: "https://social-network-besocial.netlify.app/",
     githubLink: "https://github.com/kitsunne/social-network-react",
     alt: "image of dialog page",
     description: (
       <div>
-        <p>
-          It's a replica of a social network.When people can follow each other,
-          like posts, send messages and add post.{" "}
-        </p>
+        <p>It's a replica of a social network.</p>
         <br />
-        <div>IN PROGRESS NOW</div>
+        <div>- Like posts.</div>
+        <div>- Add new posts.</div>
+        <div>- Send messages.</div>
+        <br />
+        <div>IN PROGRESS NOW ...</div>
         <Loader />
       </div>
     ),
@@ -75,18 +87,6 @@ const Portfolio = () => {
     portfolioData[index];
   return (
     <WrapperMain>
-      <ContainerButton>
-        <button onClick={() => setIndex(index === 0 ? 0 : index - 1)}>
-          Prev
-        </button>
-        <button
-          onClick={() =>
-            setIndex(index >= portfolioData.length - 1 ? 0 : index + 1)
-          }
-        >
-          Next
-        </button>
-      </ContainerButton>
       <Wrapper key={title}>
         <InfoWrapper>
           <Title>{title}</Title>
@@ -107,6 +107,18 @@ const Portfolio = () => {
           <Technologies>{technologies}</Technologies>
         </ProjectWrapper>
       </Wrapper>
+      <ContainerButton>
+        <button onClick={() => setIndex(index === 0 ? 0 : index - 1)}>
+          Prev
+        </button>
+        <button
+          onClick={() =>
+            setIndex(index >= portfolioData.length - 1 ? 0 : index + 1)
+          }
+        >
+          Next
+        </button>
+      </ContainerButton>
     </WrapperMain>
   );
 };
@@ -126,7 +138,7 @@ const WrapperMain = styled.div`
 `;
 const Technologies = styled.div`
   padding: 10px;
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 480px) {
     font-size: 18px;
   }
 `;
@@ -139,7 +151,7 @@ const Link = styled.a`
     padding: 15px 20px;
   }
   &:hover {
-    color: #60b09d;
+    color: #4bb49d;
   }
 `;
 
@@ -222,7 +234,7 @@ const InfoWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   padding-right: 50px;
-  max-width: 600px;
+  max-width: 850px;
   @media screen and (max-width: 1024px) {
     padding-right: 30px;
     max-width: 400px;
@@ -254,13 +266,14 @@ const Wrapper = styled.div`
   }
   @media screen and (max-width: 480px) {
     flex-direction: column;
-    padding-top: 30px;
+    padding-top: 0;
   }
 `;
 const ContainerButton = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 30px;
   button {
     background-color: #f37a53;
     border: none;

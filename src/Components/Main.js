@@ -12,19 +12,17 @@ const Main = () => {
         </p>
         <p>
           name:
-          <span style={{ color: "#60B09D" }}>“Daria Kiseliova”</span>;
+          <span style={{ color: " #4bb49d" }}>“Daria Kiseliova”</span>;
         </p>
         <p>
           position:
-          <span style={{ color: "#60B09D" }}>"Frontend Developer"</span>;
+          <span style={{ color: " #4bb49d" }}>"Frontend Developer"</span>;
         </p>
         <p>
-          stack: <span style={{ color: "#60B09D" }}>"JS,React,Typescript"</span>
-          ;
+          stack:{" "}
+          <span style={{ color: " #4bb49d" }}>"JS,React,Typescript"</span>;
         </p>
-        <p>
-          <span style={{ color: "#60B09D" }}>.coding();</span>
-        </p>
+        <p>.coding();</p>
         <p>
           <span style={{ color: "#C863BE" }}> &#125;</span>;
         </p>
@@ -45,7 +43,7 @@ const MainWrapper = styled.main`
   align-items: center;
   color: white;
   margin: auto;
-  width: 72%;
+  width: 75%;
   @media screen and (max-width: 1024px) {
     width: 91%;
   }
@@ -62,15 +60,7 @@ const MainWrapper = styled.main`
     flex-direction: column;
     justify-content: center;
     position: absolute;
-    top: 69%;
-    transform: translate(0, -50%);
-  }
-  @media screen and (max-width: 320px) {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 50%;
+    top: 64%;
     transform: translate(0, -50%);
   }
 `;
@@ -86,11 +76,10 @@ const FieldInfo = styled.div`
     padding: 15px 0;
   }
   @media screen and (max-width: 480px) {
-    padding-left: 40px;
     text-align: left;
-  }
-  @media screen and (max-width: 320px) {
-    text-align: left;
+    border-left: 3px solid #5b5c66;
+    padding-left: 20px;
+    padding-top: 2px;
   }
 
   p {
@@ -99,24 +88,20 @@ const FieldInfo = styled.div`
     font-size: 35px;
     letter-spacing: 2px;
     @media screen and (max-width: 1366px) {
-      font-size: 18px;
+      font-size: 24px;
       line-height: 40px;
     }
     @media screen and (max-width: 1024px) {
-      font-size: 18px;
+      font-size: 20px;
       line-height: 29px;
     }
     @media screen and (max-width: 768px) {
-      font-size: 18px;
+      font-size: 20px;
       line-height: 29px;
     }
     @media screen and (max-width: 480px) {
-      font-size: 15px;
-      line-height: 20px;
-    }
-    @media screen and (max-width: 320px) {
-      font-size: 10px;
-      line-height: 10px;
+      font-size: 18px;
+      line-height: 15px;
     }
   }
   p:nth-child(2) {
@@ -147,19 +132,16 @@ const FieldInfo = styled.div`
     font-size: 35px;
     font-weight: bold;
     @media screen and (max-width: 1366px) {
-      font-size: 18px;
+      font-size: 24px;
     }
     @media screen and (max-width: 1024px) {
-      font-size: 18px;
+      font-size: 20px;
     }
     @media screen and (max-width: 768px) {
-      font-size: 18px;
+      font-size: 20px;
     }
     @media screen and (max-width: 480px) {
-      font-size: 15px;
-    }
-    @media screen and (max-width: 320px) {
-      font-size: 15px;
+      font-size: 18px;
     }
   }
 `;
@@ -181,11 +163,11 @@ const ImageContainer = styled.div`
       text-align: center;
     }
     @media screen and (max-width: 480px) {
-      width: 200px;
+      width: 220px;
       align-self: center;
     }
     @media screen and (max-width: 320px) {
-      width: 120px;
+      width: 140px;
       align-self: center;
     }
   }

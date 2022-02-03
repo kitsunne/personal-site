@@ -47,6 +47,10 @@ const SvgWrapper = styled.div`
   align-items: center;
   width: 350px;
   height: 350px;
+  @media screen and (max-width: 480px) {
+    height: 70px;
+    margin-bottom: 74px;
+  }
 `;
 const Svg3 = styled.svg`
   fill: #f37a53;
@@ -72,6 +76,11 @@ const Svg3 = styled.svg`
       transform: rotate(360deg);
     }
   }
+  @media screen and (max-width: 480px) {
+    width: 60px;
+    height: 60px;
+    top: 3.8rem;
+  }
 `;
 const Svg2 = styled.svg`
   fill: #f37a53;
@@ -96,6 +105,11 @@ const Svg2 = styled.svg`
       transform: rotate(360deg);
     }
   }
+
+  @media screen and (max-width: 480px) {
+    width: 60px;
+    height: 60px;
+  }
 `;
 const Svg1 = styled.svg`
   fill: #f37a53;
@@ -119,6 +133,10 @@ const Svg1 = styled.svg`
       -webkit-transform: rotate(360deg);
       transform: rotate(360deg);
     }
+  }
+  @media screen and (max-width: 480px) {
+    width: 60px;
+    height: 60px;
   }
 `;
 
