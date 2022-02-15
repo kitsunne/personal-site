@@ -1,8 +1,8 @@
-import React from "react";
 import styled from "styled-components";
-import png from "../Images/sticker.png";
+
 
 const Main = () => {
+  document.title = "kitsunne: about";
   return (
     <MainWrapper>
       <FieldInfo>
@@ -29,7 +29,7 @@ const Main = () => {
       </FieldInfo>
 
       <ImageContainer>
-        <img src={png}></img>
+        <img src={require("../Images/sticker.png")} alt="logo"></img>
       </ImageContainer>
     </MainWrapper>
   );
@@ -44,6 +44,7 @@ const MainWrapper = styled.main`
   color: white;
   margin: auto;
   width: 75%;
+  
   @media screen and (max-width: 1024px) {
     width: 91%;
   }
@@ -67,13 +68,13 @@ const MainWrapper = styled.main`
 
 const FieldInfo = styled.div`
   padding: 15px 0 20px 60px;
-  line-height: 45px;
-  padding-left: 40px;
+  line-height: 35px;
+  padding-left: 35px;
   align-self: center;
   border-left: 5px solid #5b5c66;
 
   @media screen and (max-width: 768px) {
-    padding: 15px 0;
+    padding: 25px 0;
   }
   @media screen and (max-width: 480px) {
     text-align: left;
@@ -85,7 +86,7 @@ const FieldInfo = styled.div`
   p {
     font-weight: bold;
     color: #e1e3ef;
-    font-size: 35px;
+    font-size: 30px;
     letter-spacing: 2px;
     @media screen and (max-width: 1366px) {
       font-size: 24px;
@@ -150,7 +151,7 @@ const ImageContainer = styled.div`
   align-self: flex-end;
 
   img {
-    width: 550px;
+    width: 480px;
     @media screen and (max-width: 1366px) {
       width: 400px;
     }

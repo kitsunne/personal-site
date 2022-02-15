@@ -1,9 +1,17 @@
-import React from "react";
 import styled from "styled-components";
 import { useState } from "react";
 import Loader from "../../Items/Loader";
 
-const portfolioData = [
+type portfolioTypes = {
+  title: string;
+  image: string;
+  demoLink: string;
+  githubLink: string;
+  alt: string;
+  description: JSX.Element;
+  technologies: string;
+}[];
+const portfolioData: portfolioTypes = [
   {
     title: "Multifunctional App",
     image: require("../../Images/app.png"),
@@ -44,7 +52,7 @@ const portfolioData = [
 
         <div>
           - A virtual clock that counts down from a certain date to indicate the
-          end oa an event
+          end of an event.
         </div>
 
         <div>- Video player.</div>
@@ -101,7 +109,7 @@ const Portfolio = () => {
               GitHub
             </Link>
           </Links>
-          <a href={demoLink} target="_blank">
+          <a href={demoLink} target="_blank" rel="noreferrer">
             <Image src={image} alt={alt} />
           </a>
           <Technologies>{technologies}</Technologies>
@@ -204,6 +212,10 @@ const Description = styled.div`
   font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
+  @media screen and (max-width: 1366px) {
+    font-size: 16px;
+    
+  }
   @media screen and (max-width: 768px) {
     font-size: 16px;
   }
@@ -215,7 +227,7 @@ const Description = styled.div`
 const Image = styled.img`
   width: 100%;
   height: 100%;
-  max-width: 460px;
+  max-width: 450px;
 `;
 
 const Title = styled.div`
@@ -234,7 +246,7 @@ const InfoWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   padding-right: 50px;
-  max-width: 850px;
+  max-width: 900px;
   @media screen and (max-width: 1024px) {
     padding-right: 30px;
     max-width: 400px;
@@ -252,10 +264,13 @@ const Wrapper = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 70%;
+  width: 75%;
   margin: auto;
   padding-top: 50px;
   font-family: "Raleway", sans-serif;
+  @media screen and (max-width: 1366px) {
+    width: 75%;
+  }
   @media screen and (max-width: 1024px) {
     width: 90%;
   }

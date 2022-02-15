@@ -8,10 +8,9 @@ import Portfolio from "./Portfolio";
 import Home from "../Home";
 import { FaGithub, FaLinkedin, FaStarOfLife } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
-import Pdf from "../../Items/cv.pdf";
 
-const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+const NavBar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   const handleMenuOpen = () => {
     setIsMenuOpen((prev) => !prev);
@@ -38,27 +37,27 @@ const Navbar = () => {
             <span>&#x3c;</span>Blog<span>/&#x3e;</span>
           </StyledLink>
 
-          <CvLink href={require("../../Items/cv.pdf")} target="_blank">
+          <CvLink href={require("../../Items/CV.pdf")} target="_blank">
             <span>&#x3c;</span>CV<span>/&#x3e;</span>
           </CvLink>
         </LinksContainer>
         <SocialIcons>
-          <SocialLinks href="https://github.com/kitsunne">
+          <SocialLinks href="https://github.com/kitsunne" target="_blank">
             <FaGithub />
           </SocialLinks>
-          <SocialLinks href="https://www.linkedin.com/in/daria-kiseliova/">
+          <SocialLinks href="https://www.linkedin.com/in/daria-kiseliova/" target="_blank">
             <FaLinkedin />
           </SocialLinks>
-          <SocialLinks href="mailto:kisichekk@gmail.com">
+          <SocialLinks href="mailto:kisichekk@gmail.com" target="_blank">
             <SiGmail />
           </SocialLinks>
         </SocialIcons>
       </NavbarWrapper>
 
       <Routes>
-        <Route path="/portfolio" element={<Portfolio />}></Route>
-        <Route path="/blog" element={<Blog />}></Route>
-        <Route path="/" element={<Home />}></Route>
+        <Route path="/" element={<Home/>} ></Route>
+        <Route path="/portfolio" element={<Portfolio/>}></Route>
+        <Route path="/blog" element={<Blog/> }></Route>
       </Routes>
     </>
   );
@@ -87,7 +86,7 @@ const Menu = styled.div`
   }
 `;
 
-const NavbarWrapper = styled.div`
+const NavbarWrapper = styled.div <{ isMenuOpen: boolean }>`
   font-size: 20px;
   display: flex;
   justify-content: space-between;
@@ -96,7 +95,11 @@ const NavbarWrapper = styled.div`
   top: 0;
   padding: 5px 160px;
   z-index: 1000;
-
+  @media screen and (max-width: 1366px) {
+    padding: 5px 120px;
+    font-size: 18px;
+    
+  }
   @media screen and (max-width: 1024px) {
     padding: 30px 0;
     font-size: 16px;
@@ -107,7 +110,7 @@ const NavbarWrapper = styled.div`
     align-items: center;
     width: 100%;
     height: 320px;
-    font-size: 17px;
+    font-size: 15px;
     position: fixed;
     top: 0;
     box-shadow: 5px 5px 20px;
@@ -138,6 +141,11 @@ const Logo = styled.h1`
     color: #4bb49d;
     width: 15px;
   }
+  @media screen and (max-width: 1366px) {
+    font-size: 25px;
+    
+  }
+  
 `;
 const LinksContainer = styled.div`
   display: block;
@@ -190,6 +198,9 @@ const SocialIcons = styled.ul`
       transition: all 0.3s linear;
       transform: scale(1.5);
     }
+    @media screen and (max-width: 1366px) {
+    font-size: 22px;
+  }
   }
 `;
 const SocialLinks = styled.a`
@@ -224,4 +235,4 @@ const CvLink = styled.a`
   }
 `;
 
-export default Navbar;
+export default NavBar;
