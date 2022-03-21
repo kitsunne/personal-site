@@ -4,7 +4,7 @@ import NavBar from "./Components/Pages/NavBar";
 const App = () => {
   return (
     <Router>
-      <NavBar />
+      <NavBar/>
     </Router>
   );
 };

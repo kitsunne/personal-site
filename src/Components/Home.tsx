@@ -3,7 +3,7 @@ import Main from "./Main";
 
 const Home = () => {
   document.title = "kitsunne: home";
-  return (
+  return( 
     <Container>
       <Main />
     </Container>
