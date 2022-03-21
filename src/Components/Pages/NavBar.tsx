@@ -37,7 +37,7 @@ const NavBar = () => {
             <span>&#x3c;</span>Blog<span>/&#x3e;</span>
           </StyledLink>
 
-          <CvLink href={require("../../Items/CV.pdf")} target="_blank">
+          <CvLink href={require("../../Items/cv.pdf")} target="_blank">
             <span>&#x3c;</span>CV<span>/&#x3e;</span>
           </CvLink>
         </LinksContainer>
