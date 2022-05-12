@@ -44,7 +44,12 @@ const MainWrapper = styled.main`
   color: white;
   margin: auto;
   width: 75%;
-  
+  @media screen and (max-width: 1920px) {
+    width: 75%;
+  }
+  @media screen and (max-width: 1440px) {
+    width: 80%;
+  }
   @media screen and (max-width: 1024px) {
     width: 91%;
   }
@@ -66,11 +71,14 @@ const MainWrapper = styled.main`
 `;
 
 const FieldInfo = styled.div`
-  padding: 15px 0 20px 50px;
   line-height: 35px;
   padding-left: 35px;
   align-self: center;
   border-left: 3px solid #5b5c66;
+  width:900px;
+  @media screen and (max-width: 1920px) {
+    margin-left: 55px;
+  }
 
   @media screen and (max-width: 768px) {
     padding: 25px 0;
@@ -85,9 +93,12 @@ const FieldInfo = styled.div`
   p {
     font-weight: bold;
     color: #e1e3ef;
-    font-size: 25px;
+    font-size: 22px;
     letter-spacing: 2px;
-    @media screen and (max-width: 1366px) {
+    @media screen and (max-width: 1920px) {
+      font-size: 30px;
+  }
+    @media screen and (max-width: 1440px) {
       font-size: 24px;
       line-height: 40px;
     }
@@ -106,6 +117,7 @@ const FieldInfo = styled.div`
   }
   p:nth-child(2) {
     margin-left: 25px;
+   
     @media screen and (max-width: 480px) {
       margin-left: 15px;
     }
@@ -131,7 +143,10 @@ const FieldInfo = styled.div`
   span {
     font-size: 25px;
     font-weight: bold;
-    @media screen and (max-width: 1366px) {
+    @media screen and (max-width: 1920px) {
+      font-size: 30px;
+  }
+    @media screen and (max-width: 1440px) {
       font-size: 24px;
     }
     @media screen and (max-width: 1024px) {
@@ -150,7 +165,10 @@ const ImageContainer = styled.div`
   align-self:flex-end;
   img {
     width: 420px;
-    @media screen and (max-width: 1366px) {
+    @media screen and (max-width: 1920px) {
+    width: 500px;
+    } 
+    @media screen and (max-width: 1440px) {
       width: 400px;
     }
     @media screen and (max-width: 1024px) {

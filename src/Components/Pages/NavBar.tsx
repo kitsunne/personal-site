@@ -95,9 +95,12 @@ const NavbarWrapper = styled.div <{ isMenuOpen: boolean }>`
   top: 0;
   padding: 5px 160px;
   z-index: 1000;
-  @media screen and (max-width: 1366px) {
-    padding: 5px 120px;
-    font-size: 18px;
+  @media screen and (max-width: 1920px) {
+      font-size: 30px;
+  }
+  @media screen and (max-width: 1440px) {
+    padding: 5px 110px;
+    font-size: 22px;
     
   }
   @media screen and (max-width: 1024px) {
@@ -141,7 +144,10 @@ const Logo = styled.h1`
     color: #4bb49d;
     width: 15px;
   }
-  @media screen and (max-width: 1366px) {
+  @media screen and (max-width: 1920px) {
+      font-size: 32px;
+  }
+  @media screen and (max-width: 1440px) {
     font-size: 25px;
     
   }
@@ -153,6 +159,7 @@ const LinksContainer = styled.div`
     display: flex;
     flex-direction: column;
     text-align: center;
+    align-items: center;
     padding: 15px 0 15px 0;
   }
 `;
@@ -187,17 +194,25 @@ const StyledLink = styled(Link)`
 const SocialIcons = styled.ul`
   display: flex;
   list-style: none;
+  align-items: center;
 
   a {
     color: #5b5c66;
     cursor: pointer;
     font-size: 30px;
     margin: 15px;
+    text-align: center;
     &:hover {
       color: #f37a53;
       transition: all 0.3s linear;
       transform: scale(1.5);
     }
+    @media screen and (max-width: 1920px) {
+      font-size: 35px;
+  }
+  @media screen and (max-width: 1440px) {
+    font-size: 28px;
+  }
     @media screen and (max-width: 1366px) {
     font-size: 22px;
   }

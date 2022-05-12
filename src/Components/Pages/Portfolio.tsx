@@ -72,11 +72,13 @@ const portfolioData: portfolioTypes = [
       <div>
         <p>It's a replica of a social network.</p>
         <br />
+        <div>- View user accounts.</div>
+        <div>- Follow / Unfollow users.</div>
         <div>- Like posts.</div>
-        <div>- Add new posts.</div>
+        <div>- Add posts.</div>
         <div>- Send messages.</div>
         <br />
-        <div>IN PROGRESS NOW ...</div>
+        <div>...IN PROGRESS...</div>
       </div>
     ),
     technologies: "React / Redux / CSS Modules ",
@@ -134,15 +136,22 @@ const WrapperMain = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 50px;
   width: 95%;
-  @media screen and (max-width: 1024px) {
+ 
+  @media screen and (max-width: 1920px) {
+    margin: 100px auto;
+    width: 90%;
   }
+  @media screen and (max-width: 1440px) {
+      margin: 30px auto;
+      width: 95%;
+    }
   @media screen and (max-width: 768px) {
     padding-top: 110px;
   }
   @media screen and (max-width: 480px) {
     padding-top: 110px;
+    margin-bottom: 50px;
   }
 `;
 const ButtonContainer = styled.div`
@@ -207,6 +216,7 @@ const ProjectWrapper = styled.div`
   animation-fill-mode: forwards;
   align-items: center;
 
+
   @media screen and (max-width: 1024px) {
     padding: 90px 0 90px 45px;
   }
@@ -239,6 +249,10 @@ const Description = styled.div`
   @media screen and (max-width: 1366px) {
     font-size: 16px;
   }
+  @media screen and (max-width: 1440px) {
+    font-size: 16px;
+    line-height: 1.2;
+  }
   @media screen and (max-width: 768px) {
     font-size: 16px;
   }
@@ -251,11 +265,20 @@ const Image = styled.img`
   width: 100%;
   height: 100%;
   max-width: 450px;
+  @media screen and (max-width: 1920px) {
+    max-width: 550px;
+}
+@media screen and (max-width: 1440px) {
+    max-width: 450px;
+}
 `;
 
 const Title = styled.div`
   font-size: 30px;
   font-weight: bold;
+  @media screen and (max-width: 1440px) {
+    font-size: 30px;
+}
   @media screen and (max-width: 1024px) {
     font-size: 37px;
   }
@@ -268,8 +291,15 @@ const InfoWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-right: 55px;
+  padding:0 55px;
   width: auto;
+
+  @media screen and (max-width: 1920px) {
+    width: 1100px;
+}
+@media screen and (max-width: 1440px) {
+   width: 1300px;
+}
   @media screen and (max-width: 1024px) {
     padding-right: 30px;
   }
@@ -290,8 +320,9 @@ const Wrapper = styled.div`
   margin: auto;
   padding-top: 50px;
   font-family: "Raleway", sans-serif;
-  @media screen and (max-width: 1366px) {
-    width: 75%;
+  @media screen and (max-width: 1440px) {
+    width: 95%;
+    padding-top: 30px;
   }
   @media screen and (max-width: 1024px) {
     width: 90%;

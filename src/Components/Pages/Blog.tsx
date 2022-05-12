@@ -22,6 +22,12 @@ const BlogWrapper = styled.div`
   align-items: center;
   padding-top: 150px;
   background-color: #11111b;
+  @media screen and (max-width: 1920px) {
+   padding-top:200px;
+}
+@media screen and (max-width: 1440px) {
+   padding-top:130px;
+}
   @media screen and (max-width: 480px) {
     padding-top: 180px;
     height: 300px;
