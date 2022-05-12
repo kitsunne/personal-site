@@ -61,17 +61,16 @@ const MainWrapper = styled.main`
     flex-direction: column;
     justify-content: center;
     position: absolute;
-    top: 64%;
-    transform: translate(0, -50%);
+    
   }
 `;
 
 const FieldInfo = styled.div`
-  padding: 15px 0 20px 60px;
+  padding: 15px 0 20px 50px;
   line-height: 35px;
   padding-left: 35px;
   align-self: center;
-  border-left: 5px solid #5b5c66;
+  border-left: 3px solid #5b5c66;
 
   @media screen and (max-width: 768px) {
     padding: 25px 0;
@@ -86,7 +85,7 @@ const FieldInfo = styled.div`
   p {
     font-weight: bold;
     color: #e1e3ef;
-    font-size: 30px;
+    font-size: 25px;
     letter-spacing: 2px;
     @media screen and (max-width: 1366px) {
       font-size: 24px;
@@ -106,31 +105,31 @@ const FieldInfo = styled.div`
     }
   }
   p:nth-child(2) {
-    margin-left: 35px;
+    margin-left: 25px;
     @media screen and (max-width: 480px) {
       margin-left: 15px;
     }
   }
   p:nth-child(3) {
-    margin-left: 35px;
+    margin-left: 25px;
     @media screen and (max-width: 480px) {
       margin-left: 15px;
     }
   }
   p:nth-child(4) {
-    margin-left: 35px;
+    margin-left: 25px;
     @media screen and (max-width: 480px) {
       margin-left: 15px;
     }
   }
   p:nth-child(5) {
-    margin-left: 35px;
+    margin-left: 25px;
     @media screen and (max-width: 480px) {
       margin-left: 15px;
     }
   }
   span {
-    font-size: 35px;
+    font-size: 25px;
     font-weight: bold;
     @media screen and (max-width: 1366px) {
       font-size: 24px;
@@ -148,10 +147,9 @@ const FieldInfo = styled.div`
 `;
 const ImageContainer = styled.div`
   margin: 0 auto;
-  align-self: flex-end;
-
+  align-self:flex-end;
   img {
-    width: 480px;
+    width: 420px;
     @media screen and (max-width: 1366px) {
       width: 400px;
     }

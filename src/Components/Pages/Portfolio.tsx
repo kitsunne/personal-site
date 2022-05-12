@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { useState } from "react";
-import Loader from "../../Items/Loader";
 
 type portfolioTypes = {
   title: string;
@@ -55,8 +54,6 @@ const portfolioData: portfolioTypes = [
           end of an event.
         </div>
 
-        <div>- Video player.</div>
-
         <div>
           - Generator of paragraphs, where you can specify the number of
           paragraphs you want to see.
@@ -64,7 +61,7 @@ const portfolioData: portfolioTypes = [
       </div>
     ),
     technologies: "React / Styled Components",
-  },
+  }, 
   {
     title: "Social Network 'BeSocial' ",
     image: require("../../Images/social-network.png"),
@@ -80,10 +77,9 @@ const portfolioData: portfolioTypes = [
         <div>- Send messages.</div>
         <br />
         <div>IN PROGRESS NOW ...</div>
-        <Loader />
       </div>
     ),
-    technologies: "React ",
+    technologies: "React / Redux / CSS Modules ",
   },
 ];
 
@@ -96,9 +92,14 @@ const Portfolio = () => {
   return (
     <WrapperMain>
       <Wrapper key={title}>
+        <ButtonContainer>
+           <button onClick={() => setIndex(index === 0 ? 0 : index - 1)}>
+          .prev
+           </button>
+        </ButtonContainer>
         <InfoWrapper>
-          <Title>{title}</Title>
-          <Description>{description}</Description>
+           <Title>{title}</Title>
+           <Description>{description}</Description>
         </InfoWrapper>
         <ProjectWrapper>
           <Links>
@@ -110,23 +111,20 @@ const Portfolio = () => {
             </Link>
           </Links>
           <a href={demoLink} target="_blank" rel="noreferrer">
-            <Image src={image} alt={alt} />
+             <Image src={image} alt={alt} />
           </a>
           <Technologies>{technologies}</Technologies>
         </ProjectWrapper>
-      </Wrapper>
-      <ContainerButton>
-        <button onClick={() => setIndex(index === 0 ? 0 : index - 1)}>
-          Prev
-        </button>
-        <button
-          onClick={() =>
+        <ButtonContainer>
+           <button
+             onClick={() =>
             setIndex(index >= portfolioData.length - 1 ? 0 : index + 1)
           }
-        >
-          Next
-        </button>
-      </ContainerButton>
+           >
+          .next
+           </button>
+        </ButtonContainer>
+      </Wrapper>
     </WrapperMain>
   );
 };
@@ -135,6 +133,9 @@ const WrapperMain = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  width: 95%;
   @media screen and (max-width: 1024px) {
   }
   @media screen and (max-width: 768px) {
@@ -142,6 +143,30 @@ const WrapperMain = styled.div`
   }
   @media screen and (max-width: 480px) {
     padding-top: 110px;
+  }
+`;
+const ButtonContainer = styled.div`
+  button {
+    background-color: #4bb49d;
+    border: none;
+    margin: 0 50px;
+    width: 75px;
+    height: 30px;
+    color: white;
+    font-size: 22px;
+    border-radius: 5px;
+    &:hover {
+      background-color: transparent;
+      border: 1px solid  #4bb49d;
+      color: white;
+    }
+    @media screen and (max-width: 480px) {
+    margin-bottom: 20px;
+    width: 63px;
+    height: 25px;
+    font-size:17px;
+    font-weight: bold;
+  }
   }
 `;
 const Technologies = styled.div`
@@ -177,7 +202,6 @@ const ProjectWrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 40px 0 40px 45px;
   animation-name: fadeInFromNone;
   animation-duration: 1.5s;
   animation-fill-mode: forwards;
@@ -209,12 +233,11 @@ const ProjectWrapper = styled.div`
 `;
 
 const Description = styled.div`
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 400;
   line-height: 1.5;
   @media screen and (max-width: 1366px) {
     font-size: 16px;
-    
   }
   @media screen and (max-width: 768px) {
     font-size: 16px;
@@ -245,11 +268,10 @@ const InfoWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-right: 50px;
-  max-width: 900px;
+  padding-right: 55px;
+  width: auto;
   @media screen and (max-width: 1024px) {
     padding-right: 30px;
-    max-width: 400px;
   }
   @media screen and (max-width: 768px) {
     max-width: 100%;
@@ -264,7 +286,7 @@ const Wrapper = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 75%;
+  width: 90%;
   margin: auto;
   padding-top: 50px;
   font-family: "Raleway", sans-serif;
@@ -284,26 +306,6 @@ const Wrapper = styled.div`
     padding-top: 0;
   }
 `;
-const ContainerButton = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 30px;
-  button {
-    background-color: #f37a53;
-    border: none;
-    margin: 20px;
-    width: 70px;
-    height: 30px;
-    color: black;
-    font-size: 18px;
-    border-radius: 5px;
-    &:hover {
-      background-color: transparent;
-      border: 1px solid #f37a53;
-      color: white;
-    }
-  }
-`;
+
 
 export default Portfolio;

@@ -11,7 +11,7 @@ const Home = () => {
 };
 
 const Container = styled.div`
-  margin: 0 50px;
+  margin: 0 60px;
   overflow: hidden;
   animation-name: fadeInFromNone;
   animation-duration: 1.5s;

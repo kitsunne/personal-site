@@ -16,14 +16,14 @@ const Blog = () => {
 };
 const BlogWrapper = styled.div`
   display: flex;
-  margin: 0 auto;
+  margin:0  auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-top: 150px;
   background-color: #11111b;
   @media screen and (max-width: 480px) {
-    padding-top: 90px;
+    padding-top: 180px;
     height: 300px;
   }
 `;
