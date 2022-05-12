@@ -150,7 +150,7 @@ const WrapperMain = styled.div`
     padding-top: 110px;
   }
   @media screen and (max-width: 480px) {
-    padding-top: 110px;
+    padding-top: 80px;
     margin-bottom: 50px;
   }
 `;
@@ -181,7 +181,7 @@ const ButtonContainer = styled.div`
 const Technologies = styled.div`
   padding: 10px;
   @media screen and (max-width: 480px) {
-    font-size: 18px;
+    font-size: 16px;
   }
 `;
 
@@ -276,14 +276,16 @@ const Image = styled.img`
 const Title = styled.div`
   font-size: 30px;
   font-weight: bold;
+  
   @media screen and (max-width: 1440px) {
     font-size: 30px;
 }
   @media screen and (max-width: 1024px) {
     font-size: 37px;
   }
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 480px) {
     font-size: 20px;
+    text-align: center;
   }
 `;
 
@@ -291,7 +293,7 @@ const InfoWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding:0 55px;
+  padding:auto 55px;
   width: auto;
 
   @media screen and (max-width: 1920px) {

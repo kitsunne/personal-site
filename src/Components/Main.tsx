@@ -54,19 +54,18 @@ const MainWrapper = styled.main`
     width: 91%;
   }
   @media screen and (max-width: 768px) {
-    width: 85%;
+    width: 90%;
     flex-direction: column;
     text-align: center;
     position: absolute;
-    top: 60%;
+    top: 50%;
     transform: translate(0, -50%);
   }
   @media screen and (max-width: 480px) {
     width: 90%;
     flex-direction: column;
     justify-content: center;
-    position: absolute;
-    
+    align-items: center;
   }
 `;
 
@@ -85,9 +84,14 @@ const FieldInfo = styled.div`
   }
   @media screen and (max-width: 480px) {
     text-align: left;
+    line-height: 20px;
     border-left: 3px solid #5b5c66;
-    padding-left: 20px;
-    padding-top: 2px;
+    margin-top:40px;
+    margin-left: 30px;
+    padding: 0 20px 0 10px;
+   
+    width: 300px;
+    height: fit-content;
   }
 
   p {
