@@ -75,7 +75,7 @@ const portfolioData: portfolioTypes = [
         <div>- Log in and Log out</div>
         <div>- View user accounts.</div>
         <div>- Follow / Unfollow users.</div>
-        <div>- Change your status</div>
+        <div>- Change your status.</div>
         <div>- Like posts.</div>
         <div>- Add posts.</div>
         <div>- Send messages.</div>
