@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { useState } from "react";
 
-type portfolioTypes = {
+export interface PortfolioTypes{
   title: string;
   image: string;
   demoLink: string;
@@ -9,59 +8,9 @@ type portfolioTypes = {
   alt: string;
   description: JSX.Element;
   technologies: string;
-}[];
-const portfolioData: portfolioTypes = [
-  {
-    title: "Multifunctional App",
-    image: require("../../Images/app.png"),
-    demoLink: "https://multifunctional.netlify.app",
-    githubLink: "https://github.com/kitsunne/vanilla-practice-react",
-    alt: "image of main page",
-    description: (
-      <div>
-        <p>It's a collection of mini projects implemented at React.</p>
-        <div>There are 10 working applications:</div>
-        <br />
-        <div>- Modal Window, which you can open and close.</div>
-        <div>
-          - QA block, which has written in a way of Accordion, vertically
-          stacked list of items. Where each can be collapsed to reveal the
-          content associated with that item.
-        </div>
-        <div>
-          - Reviews slider, where you can swipe reviews or choose random one.
-        </div>
+};
 
-        <div>
-          - Dish menu that allows to choose dishes based on certain
-          criteria/category.
-        </div>
-
-        <div>
-          - Grocery List, like todo list making app. Here you can add, edit,
-          delete the item or clean everything at all.
-        </div>
-
-        <div>- Simple photo slider.</div>
-
-        <div>
-          - Information tabs. With the informational items, each item can be
-          collapsed to reveal the content associated with that item.
-        </div>
-
-        <div>
-          - A virtual clock that counts down from a certain date to indicate the
-          end of an event.
-        </div>
-
-        <div>
-          - Generator of paragraphs, where you can specify the number of
-          paragraphs you want to see.
-        </div>
-      </div>
-    ),
-    technologies: "React / Styled Components",
-  }, 
+const portfolioData: PortfolioTypes[] = [
   {
     title: "Social Network 'BeSocial' ",
     image: require("../../Images/social-network.png"),
@@ -70,37 +19,41 @@ const portfolioData: portfolioTypes = [
     alt: "image of dialog page",
     description: (
       <div>
-        <p>It's a replica of a social network.</p>
-        <br />
-        <div>- Log in and Log out</div>
-        <div>- View user accounts.</div>
-        <div>- Follow / Unfollow users.</div>
-        <div>- Change your status.</div>
-        <div>- Like posts.</div>
-        <div>- Add posts.</div>
-        <div>- Send messages.</div>
-        <br />
+        <p>It's a social network, where you can Log in and Log out, view users and their profiles, follow or unfollow them, personalize personal profile (upload photo, edit status, etc.), add posts and "like", send messages . </p>
         <div>...IN PROGRESS...</div>
       </div>
     ),
     technologies: "React / Redux / CSS Modules ",
   },
+  {
+    title: "Multifunctional App",
+    image: require("../../Images/app.png"),
+    demoLink: "https://multifunctional.netlify.app",
+    githubLink: "https://github.com/kitsunne/vanilla-practice-react",
+    alt: "image of main page",
+    description: (
+      <div>
+        <p>It's a collection of 10 mini apps implemented at React.And some of them are:</p>
+          <div><strong>Reviews slider</strong>, where you can swipe reviews or choose random one</div>
+          <div><strong>Dish menu</strong> that allows to choose dishes based on certain category</div>
+          <div><strong>Grocery List</strong>, which walks you through the process of creating a simple CRUD. (CRUD just means create, read, update, and delete.)</div>
+          <div><strong>Tabs with the information</strong>, each item can be collapsed to reveal the content associated with that item</div>
+          <div><strong>A virtual clock</strong> that counts down from a certain date to indicate the end of an event</div>
+          <div><strong>Generator of paragraphs</strong>, where you can specify the number of paragraphs you want to see</div>
+      </div>
+    ),
+    technologies: "React / Styled Components",
+  }, 
+  
 ];
 
 const Portfolio = () => {
   document.title = "kitsunne: portfolio";
-
-  const [index, setIndex] = useState(0);
-  const { title, image, demoLink, githubLink, alt, description, technologies } =
-    portfolioData[index];
   return (
     <WrapperMain>
-      <Wrapper key={title}>
-        <ButtonContainer>
-           <button onClick={() => setIndex(index === 0 ? 0 : index - 1)}>
-          .prev
-           </button>
-        </ButtonContainer>
+      {portfolioData.map(({title, image, demoLink, githubLink, alt, description, technologies}:PortfolioTypes)=>{
+        return (
+        <Wrapper key={title}>
         <InfoWrapper>
            <Title>{title}</Title>
            <Description>{description}</Description>
@@ -114,21 +67,16 @@ const Portfolio = () => {
               GitHub
             </Link>
           </Links>
+          <ImageContainer>
           <a href={demoLink} target="_blank" rel="noreferrer">
              <Image src={image} alt={alt} />
           </a>
+          </ImageContainer>
           <Technologies>{technologies}</Technologies>
         </ProjectWrapper>
-        <ButtonContainer>
-           <button
-             onClick={() =>
-            setIndex(index >= portfolioData.length - 1 ? 0 : index + 1)
-          }
-           >
-          .next
-           </button>
-        </ButtonContainer>
       </Wrapper>
+      )
+      })}
     </WrapperMain>
   );
 };
@@ -141,43 +89,19 @@ const WrapperMain = styled.div`
   width: 95%;
  
   @media screen and (max-width: 1920px) {
-    margin: 100px auto;
+    margin: 0 auto;
     width: 90%;
   }
   @media screen and (max-width: 1440px) {
-      margin: 30px auto;
+      margin: 0 auto;
       width: 95%;
     }
   @media screen and (max-width: 768px) {
     padding-top: 110px;
   }
   @media screen and (max-width: 480px) {
+    width: 95%;
     padding-top: 80px;
-    margin-bottom: 50px;
-  }
-`;
-const ButtonContainer = styled.div`
-  button {
-    background-color: #4bb49d;
-    border: none;
-    margin: 0 50px;
-    width: 75px;
-    height: 30px;
-    color: white;
-    font-size: 22px;
-    border-radius: 5px;
-    &:hover {
-      background-color: transparent;
-      border: 1px solid  #4bb49d;
-      color: white;
-    }
-    @media screen and (max-width: 480px) {
-    margin-bottom: 20px;
-    width: 63px;
-    height: 25px;
-    font-size:17px;
-    font-weight: bold;
-  }
   }
 `;
 const Technologies = styled.div`
@@ -217,7 +141,6 @@ const ProjectWrapper = styled.div`
   animation-duration: 1.5s;
   animation-fill-mode: forwards;
   align-items: center;
-
 
   @media screen and (max-width: 1024px) {
     padding: 90px 0 90px 45px;
@@ -263,16 +186,32 @@ const Description = styled.div`
   }
 `;
 
+const ImageContainer = styled.div`
+    display: flex;
+    width:650px;
+    height: auto;
+    justify-content:center;
+    @media screen and (max-width: 768px) {
+    height: 205px;
+}
+@media screen and (max-width: 768px) {
+  width:320px;
+  height: 180px;
+}
+`;
 const Image = styled.img`
   width: 100%;
   height: 100%;
-  max-width: 450px;
   @media screen and (max-width: 1920px) {
     max-width: 550px;
 }
 @media screen and (max-width: 1440px) {
     max-width: 450px;
 }
+@media screen and (max-width: 480px) {
+    max-width: 350px;
+}
+
 `;
 
 const Title = styled.div`
@@ -283,7 +222,7 @@ const Title = styled.div`
     font-size: 30px;
 }
   @media screen and (max-width: 1024px) {
-    font-size: 37px;
+    font-size: 33px;
   }
   @media screen and (max-width: 480px) {
     font-size: 20px;
@@ -292,18 +231,15 @@ const Title = styled.div`
 `;
 
 const InfoWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding:auto 55px;
-  width: auto;
-
+  display: block;
+  width:800px;
+  padding-right: 20px;
   @media screen and (max-width: 1920px) {
-    width: 1100px;
-}
-@media screen and (max-width: 1440px) {
+    width: 1600px;
+  }
+  @media screen and (max-width: 1440px) {
    width: 1300px;
-}
+  }
   @media screen and (max-width: 1024px) {
     padding-right: 30px;
   }
@@ -318,15 +254,14 @@ const Wrapper = styled.div`
   color: white;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content:space-around;
   align-items: center;
   width: 90%;
-  margin: auto;
-  padding-top: 50px;
+  padding:5px 0  20px 0;
   font-family: "Raleway", sans-serif;
   @media screen and (max-width: 1440px) {
-    width: 95%;
-    padding-top: 30px;
+    width: 90%;
+    padding:20px 0  60px 0;
   }
   @media screen and (max-width: 1024px) {
     width: 90%;
