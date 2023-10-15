@@ -7,7 +7,7 @@ import Blog from "./Blog";
 import Portfolio from "./Portfolio";
 import Home from "../Home";
 import { FaGithub, FaLinkedin, FaStarOfLife } from "react-icons/fa";
-import { SiGmail } from "react-icons/si";
+import { SiGmail, SiArtstation } from "react-icons/si";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -48,6 +48,9 @@ const NavBar = () => {
           <SocialLinks href="https://www.linkedin.com/in/daria-kiseliova/" target="_blank">
             <FaLinkedin />
           </SocialLinks>
+          <SocialLinks href="https://www.artstation.com/kitsunne" target="_blank">
+            <SiArtstation />
+          </SocialLinks>
           <SocialLinks href="mailto:kisichekk@gmail.com" target="_blank">
             <SiGmail />
           </SocialLinks>
@@ -55,9 +58,9 @@ const NavBar = () => {
       </NavbarWrapper>
 
       <Routes>
-        <Route path="/" element={<Home/>} ></Route>
-        <Route path="/portfolio" element={<Portfolio/>}></Route>
-        <Route path="/blog" element={<Blog/> }></Route>
+        <Route path="/" element={<Home />} ></Route>
+        <Route path="/portfolio" element={<Portfolio />}></Route>
+        <Route path="/blog" element={<Blog />}></Route>
       </Routes>
     </>
   );
@@ -119,8 +122,8 @@ const NavbarWrapper = styled.div <{ isMenuOpen: boolean }>`
     box-shadow: 5px 5px 20px;
     transition: all 0.3s ease;
     ${(props) =>
-      props.isMenuOpen
-        ? `
+    props.isMenuOpen
+      ? `
       background: #11111b;
       left: 0;
       opacity: 1;
@@ -128,7 +131,7 @@ const NavbarWrapper = styled.div <{ isMenuOpen: boolean }>`
       transition: all 0.3s ease;
       z-index: 1;
     `
-        : `
+      : `
     opacity: 1;
     top: -100%;
     `}

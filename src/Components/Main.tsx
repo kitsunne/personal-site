@@ -5,46 +5,45 @@ const Main = () => {
   document.title = "kitsunne: about";
   return (
     <MainWrapper>
-        <FieldInfo>
-          <p>
-            const <span style={{ color: "#F37A53" }}>human</span> ={" "}
-            <span style={{ color: "#C863BE" }}> &#x7B; </span>
-          </p>
-          <p>
-            name:
-            <span style={{ color: " #4bb49d" }}>“Daria Kiseliova”</span>;
-          </p>
-          <p>
-            position:
-            <span style={{ color: " #4bb49d" }}>"Frontend Developer"</span>;
-          </p>
-          <p>
-            stack:{" "}
-            <span style={{ color: " #4bb49d" }}>"JS,React,Typescript"</span>;
-          </p>
-          <p>.coding();</p>
-          <p>
-            <span style={{ color: "#C863BE" }}> &#125;</span>;
-          </p>
-          <Speech>
+      <FieldInfo>
+        <p>
+          const <span style={{ color: "#F37A53" }}>human</span> ={" "}
+          <span style={{ color: "#C863BE" }}> &#x7B; </span>
+        </p>
+        <p>
+          name:
+          <span style={{ color: " #4bb49d" }}>“Daria Kiseliova”</span>;
+        </p>
+        <p>
+          position:
+          <span style={{ color: " #4bb49d" }}>"QA Engineer / Game Tester"</span>;
+        </p>
+        <p>
+          stack:{" "}
+          <span style={{ color: " #4bb49d" }}>"UE5"</span>;
+        </p>
+        <p>.testing();</p>
+        <p>
+          <span style={{ color: "#C863BE" }}> &#125;</span>;
+        </p>
+        <Speech>
           <Border>
-          <Quote>Hi, I am a passionate fresher in Web Development with huge desire to learn. Flexible and quick learner with analytical thinking and good sense of humor. Dreaming  about being a part of GameDev Community and create games. </Quote>
+            <Quote>Hi, I am a passionate fresher in GameDev and GameTesting with huge desire to learn. Now I am working as QA Engineer on a cross-platform AAA project under NDA and boosting my skills up in Level Design. </Quote>
           </Border>
-          </Speech>
-        </FieldInfo>
-        <ImageContainer>
-          <img src={require("../Images/me1.JPG")} alt="logo"></img>
-        </ImageContainer>
-        <OptionalInfo>
+        </Speech>
+      </FieldInfo>
+      <ImageContainer>
+        <img src={require("../Images/me2.jpg")} alt="logo"></img>
+      </ImageContainer>
+      <OptionalInfo>
         <Interest> .gameAddiction </Interest>
         <Interest> .cycling </Interest>
         <Interest> .japaneseMythology </Interest>
-        <Interest> .booksReader </Interest>
-        <Interest> .comicsLover </Interest>
+        <Interest> .levelDesign</Interest>
         <Interest> .funkoPopCollector </Interest>
-        <Interest> .serialsWatcher </Interest>
+        <Interest> .witcherLover </Interest>
         <Interest> .travelling </Interest>
-        </OptionalInfo>
+      </OptionalInfo>
     </MainWrapper>
   );
 };
@@ -107,7 +106,7 @@ const OptionalInfo = styled.div`
       padding: 40px 20px;
     }
   `;
-  const Speech= styled.div`
+const Speech = styled.div`
   margin:10px;
   border: solid black;
   float:left; 
