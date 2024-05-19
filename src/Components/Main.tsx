@@ -78,7 +78,7 @@ const MainWrapper = styled.main`
     justify-content: center;
     align-items: center;
     height:100%;
-    margin-top:120px;
+    margin-top:150px;
   }
   @media screen and (max-width: 350px) {
     margin-top:100px;
