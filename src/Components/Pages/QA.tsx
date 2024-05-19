@@ -72,18 +72,18 @@ const QA = () => {
     margin-top:300px;
   }
   @media screen and (max-width: 480px) {
-    width: 90%;
+    width: 95%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height:100%;
-    margin-top:250px;
+    height:90%;
+    margin-top:200px;
   }
   @media screen and (max-width: 350px) {
-    margin-top:350px;
+    margin-top:300px;
   }
   @media screen and (max-width: 250px) {
-    margin-top:550px;
+    margin-top:370px;
   }
  
 `;
@@ -107,34 +107,37 @@ const TextInfo = styled.main`
     }
   }
 
+  @media screen and (max-width: 480px) {
+    font-size: 15px;
+  }
+
 `;
 
 const MediaInfo = styled.div`
-  margin: 0 auto;
+  margin: auto;
   img {
     width: 300px;
-    border-radius: 10%; 
+    border-radius: 5%; 
     @media screen and (max-width: 1920px) {
     width: 550px;
     } 
     @media screen and (max-width: 1440px) {
-      width: 300px;
+      width: 550px;
     }
     @media screen and (max-width: 1024px) {
-      width: 300px;
+      width: 600px;
     }
     @media screen and (max-width: 768px) {
-      width: 280px;
+      width: 450px;
       align-self: center;
       text-align: center;
     }
     @media screen and (max-width: 480px) {
-      width: 300px;
-      align-self: center;
-      margin:30px 0;
+      width: 350px;
+      margin:10px 0;
     }
-    @media screen and (max-width: 320px) {
-      width: 200px;
+    @media screen and (max-width: 350px) {
+      width: 250px;
       align-self: center;
     }
   }
@@ -162,7 +165,7 @@ const OptionalInfo = styled.div`
     }
     @media screen and (max-width: 480px) {
       height: 100%;
-      font-size: 15px;
+      font-size: 12px;
       flex-direction: column;
       flex-wrap: wrap;
       padding: 40px 20px;

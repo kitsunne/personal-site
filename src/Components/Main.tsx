@@ -69,6 +69,7 @@ const MainWrapper = styled.main`
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
+    margin-top:150px;
   }
   @media screen and (max-width: 480px) {
     width: 90%;
@@ -76,7 +77,10 @@ const MainWrapper = styled.main`
     justify-content: center;
     align-items: center;
     height:100%;
-    margin-top:250px;
+    margin-top:120px;
+  }
+  @media screen and (max-width: 350px) {
+    margin-top:10px;
   }
   @media screen and (max-width: 350px) {
     margin-top:10px;
