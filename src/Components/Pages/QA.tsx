@@ -60,6 +60,7 @@ const QA = () => {
   }
   @media screen and (max-width: 1024px) {
     width: 90%;
+    margin-top:100px;
   }
   @media screen and (max-width: 768px) {
     width: 90%;
@@ -68,7 +69,7 @@ const QA = () => {
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
-    margin-top:200px;
+    margin-top:300px;
   }
   @media screen and (max-width: 480px) {
     width: 90%;
@@ -79,7 +80,10 @@ const QA = () => {
     margin-top:250px;
   }
   @media screen and (max-width: 350px) {
-    margin-top:320px;
+    margin-top:350px;
+  }
+  @media screen and (max-width: 250px) {
+    margin-top:550px;
   }
  
 `;

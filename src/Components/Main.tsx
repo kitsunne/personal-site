@@ -79,7 +79,7 @@ const MainWrapper = styled.main`
     margin-top:250px;
   }
   @media screen and (max-width: 350px) {
-    margin-top:100px;
+    margin-top:10px;
   }
  
 `;
