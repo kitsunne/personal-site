@@ -16,11 +16,7 @@ const Main = () => {
         </p>
         <p>
           position:
-          <span style={{ color: " #4bb49d" }}>"QA Engineer / Game Tester"</span>;
-        </p>
-        <p>
-          stack:{" "}
-          <span style={{ color: " #4bb49d" }}>"UE5"</span>;
+          <span style={{ color: " #4bb49d" }}>"QA Engineer"</span>;
         </p>
         <p>.testing();</p>
         <p>
@@ -28,7 +24,7 @@ const Main = () => {
         </p>
         <Speech>
           <Border>
-            <Quote>Hi, I am a passionate fresher in GameDev and GameTesting with huge desire to learn. Now I am working as QA Engineer on a cross-platform AAA project under NDA and boosting my skills up in Level Design. </Quote>
+            <Quote>Hi,I'm a gamedev ronin with 1.5 years of experience as QA Engineer on a cross-platform multiplayer PVP/PVE shooter and a lot of gaming experience. I am a flexible and quick learner with analytical thinking and good sense of humor. </Quote>
           </Border>
         </Speech>
       </FieldInfo>
@@ -36,13 +32,13 @@ const Main = () => {
         <img src={require("../Images/me2.jpg")} alt="logo"></img>
       </ImageContainer>
       <OptionalInfo>
-        <Interest> .gameAddiction </Interest>
-        <Interest> .cycling </Interest>
-        <Interest> .japaneseMythology </Interest>
-        <Interest> .levelDesign</Interest>
-        <Interest> .funkoPopCollector </Interest>
-        <Interest> .witcherLover </Interest>
-        <Interest> .travelling </Interest>
+        <Skill> .gameAddiction </Skill>
+        <Skill> .witcherLover </Skill>
+        <Skill> .japaneseMythology </Skill>
+        <Skill> .travelling</Skill>
+        <Skill> .levelDesign </Skill>
+        <Skill> .funkoPopCollector </Skill>
+        <Skill> .cycling </Skill>
       </OptionalInfo>
     </MainWrapper>
   );
@@ -92,11 +88,12 @@ const OptionalInfo = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: left;
   height: 450px;
   padding: 0 50px;
   font-size: 20px;
   @media screen and (max-width: 1920px) {
-    font-size: 15px;
+    font-size: 18px;
   }
     @media screen and (max-width: 480px) {
       height: 100px;
@@ -143,7 +140,7 @@ font-size:25px;
     @media screen and (max-width: 480px) {
     font-size: 15px;
   }`;
-const Interest = styled.div`
+const Skill = styled.div`
 font-weight: bold;
 text-shadow: 0px 0px 29px #c863be;
 `;

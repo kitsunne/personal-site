@@ -5,6 +5,7 @@ import { HiMenu } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
 import Blog from "./Blog";
 import Portfolio from "./Portfolio";
+import QA from "./QA";
 import Home from "../Home";
 import { FaGithub, FaLinkedin, FaStarOfLife } from "react-icons/fa";
 import { SiGmail, SiArtstation } from "react-icons/si";
@@ -29,6 +30,9 @@ const NavBar = () => {
           <StyledLink to="/" onClick={handleMenuOpen}>
             <span>&#x3c;</span>About
             <span>/&#x3e;</span>
+          </StyledLink>
+          <StyledLink to="/qa" onClick={handleMenuOpen}>
+            <span>&#x3c;</span>QA<span>/&#x3e;</span>
           </StyledLink>
           <StyledLink to="/portfolio" onClick={handleMenuOpen}>
             <span>&#x3c;</span>Portfolio<span>/&#x3e;</span>
@@ -59,6 +63,7 @@ const NavBar = () => {
 
       <Routes>
         <Route path="/" element={<Home />} ></Route>
+        <Route path="/qa" element={<QA />}></Route>
         <Route path="/portfolio" element={<Portfolio />}></Route>
         <Route path="/blog" element={<Blog />}></Route>
       </Routes>
