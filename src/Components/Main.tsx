@@ -61,6 +61,7 @@ const MainWrapper = styled.main`
   }
   @media screen and (max-width: 1024px) {
     width: 90%;
+    margin-top:150px;
   }
   @media screen and (max-width: 768px) {
     width: 90%;
@@ -83,7 +84,7 @@ const MainWrapper = styled.main`
     margin-top:10px;
   }
   @media screen and (max-width: 350px) {
-    margin-top:10px;
+    margin-top:60px;
   }
  
 `;

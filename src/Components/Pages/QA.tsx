@@ -77,13 +77,16 @@ const QA = () => {
     justify-content: center;
     align-items: center;
     height:90%;
-    margin-top:200px;
+    margin-top:230px;
   }
   @media screen and (max-width: 350px) {
-    margin-top:300px;
+    margin-top:240px;
+  }
+  @media screen and (max-width: 300px) {
+    margin-top:340px;
   }
   @media screen and (max-width: 250px) {
-    margin-top:370px;
+    margin-top:380px;
   }
  
 `;
