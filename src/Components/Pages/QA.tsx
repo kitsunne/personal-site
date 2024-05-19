@@ -77,7 +77,7 @@ const QA = () => {
     justify-content: center;
     align-items: center;
     height:90%;
-    margin-top:230px;
+    margin-top:300px;
   }
   @media screen and (max-width: 350px) {
     margin-top:240px;

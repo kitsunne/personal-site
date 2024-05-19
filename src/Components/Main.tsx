@@ -81,7 +81,7 @@ const MainWrapper = styled.main`
     margin-top:120px;
   }
   @media screen and (max-width: 350px) {
-    margin-top:10px;
+    margin-top:100px;
   }
   @media screen and (max-width: 350px) {
     margin-top:60px;
