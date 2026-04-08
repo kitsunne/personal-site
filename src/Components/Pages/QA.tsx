@@ -32,8 +32,8 @@ const QA = () => {
         <Skill> Jenkins/GitLab </Skill>
         <Skill> Postman/Swagger API </Skill>
         <Skill> Lens/Grafana/Kibana </Skill>
-        <Skill> DevTools</Skill>
-        <Skill> Kafka</Skill>
+        <Skill> DevTools </Skill>
+        <Skill> Kafka </Skill>
         <Skill> Sentry </Skill>
         </OptionalInfo>
       </QAWrapper>
@@ -41,7 +41,7 @@ const QA = () => {
   };
 
   const QAWrapper = styled.main`
-  height: 80vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
