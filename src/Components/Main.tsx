@@ -29,7 +29,7 @@ const Main = () => {
         </Speech>
       </FieldInfo>
       <ImageContainer>
-        <img src={require("../Images/me2.jpg")} alt="logo"></img>
+        <img src={require("../Images/me.jpg")} alt="logo"></img>
       </ImageContainer>
       <OptionalInfo>
         <Skill> .gameAddiction </Skill>

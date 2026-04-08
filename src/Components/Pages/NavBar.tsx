@@ -41,7 +41,7 @@ const NavBar = () => {
             <span>&#x3c;</span>Blog<span>/&#x3e;</span>
           </StyledLink>
 
-          <CvLink href={require("../../Items/CV.pdf")} target="_blank">
+          <CvLink href="https://drive.google.com/file/d/1T47BCEaOv__cQJxi69pvsUu1JgJzVLDf/view?usp=drive_link" target="_blank">
             <span>&#x3c;</span>CV<span>/&#x3e;</span>
           </CvLink>
         </LinksContainer>
