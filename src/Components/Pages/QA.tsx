@@ -21,7 +21,8 @@ const QA = () => {
         <p> - Mentoring teammates and participate in hiring / onboarding</p>
         </TextInfo>
         <MediaInfo>
-    {/* <img src={require("../../Images/testing.png")} alt="testing"></img> */}
+                         <StyledLink href="https://store.steampowered.com/app/4193590/Salvation_Denied/" target="_blank" rel="sd"> --Salvation Denied on Steam-- </StyledLink>
+                 <StyledLink href="https://store.steampowered.com/app/3905450/WheelMates/" target="_blank" rel="wm"> --WheelMates on Steam-- </StyledLink>
       </MediaInfo>
         <OptionalInfo>
         <Skill> Unreal Engine 5 </Skill>
@@ -172,6 +173,29 @@ const OptionalInfo = styled.div`
       padding: 40px 20px;
     }
   `;
+
+  const StyledLink = styled.a`
+  margin: 0 20px;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  color: #4bb49d;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.1rem;
+  letter-spacing: 5px;
+  border-radius: 4px;
+  padding: 5px;
+  font-size: 18px;
+
+
+  &:hover {
+    color: white;
+    transition: all 0.3s linear;
+    span {
+      color: #c863be;
+    }
+  }
+`;
 
 const Skill = styled.div`
 color:#f37a53;
