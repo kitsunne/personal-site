@@ -55,7 +55,7 @@ const NavBar = () => {
           <SocialLinks href="https://www.artstation.com/kitsunne" target="_blank">
             <SiArtstation />
           </SocialLinks>
-          <SocialLinks href="mailto:kisichekk@gmail.com" target="_blank">
+          <SocialLinks href="mailto:dariakiseliova312@gmail.com" target="_blank">
             <SiGmail />
           </SocialLinks>
         </SocialIcons>

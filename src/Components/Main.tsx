@@ -24,7 +24,7 @@ const Main = () => {
         </p>
         <Speech>
           <Border>
-            <Quote>Hi,I'm a gamedev ronin with 1.5 years of experience as QA Engineer on a cross-platform multiplayer PVP/PVE shooter and a lot of gaming experience. I am a flexible and quick learner with analytical thinking and good sense of humor. </Quote>
+            <Quote>Hi, I am a Gamedev ronin with 3+ years of experience as QA Engineer on PC/console projects. I am a flexible and quick learner with analytical thinking and good sense of humor. </Quote>
           </Border>
         </Speech>
       </FieldInfo>
@@ -33,12 +33,10 @@ const Main = () => {
       </ImageContainer>
       <OptionalInfo>
         <Skill> .gameAddiction </Skill>
+        <Skill> .fencing </Skill>
         <Skill> .witcherLover </Skill>
         <Skill> .japaneseMythology </Skill>
         <Skill> .travelling</Skill>
-        <Skill> .levelDesign </Skill>
-        <Skill> .funkoPopCollector </Skill>
-        <Skill> .cycling </Skill>
       </OptionalInfo>
     </MainWrapper>
   );

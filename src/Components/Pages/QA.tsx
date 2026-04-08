@@ -7,16 +7,18 @@ const QA = () => {
       <QAWrapper>
         <TextInfo>
         <h1>Work experience</h1>
-        <p> - Working on a cross-platform project under NDA, a multiplayer PVP/PVE shooter in the sci-fi realism genre</p>
-        <p> - Communicating with developers, game designers, UX/UI designers, artists and PMs to resolve issues </p>
-        <p> - Performing of manual unit, functional, smoke, regression testing on PC and consoles (PS5, Xbox)</p>
-        <p> - Performing of Gameplay, Art, UX/UI, Frontend, Backend testing </p>
-        <p> - Creating and maintaining up-to-date test documentation ( test cases, check lists and etc.)</p>
-        <p> - Participating in the certification of consoles on Playstation and Xbox platforms </p>
-        <p> - Creating and supporting of defects in Jira bug tracking system, analyzing of crash reports via Sentry</p>
-        <p> - Deploying game servers using Jenkins and working with environments using Lens</p>
-        <p> - Analyzing, reviewing of game design documents, participating in development of new features</p>
-        <p> - Mentoring new team members</p>
+        <p> - Worked on a cross-platform AAA project, a multiplayer PVP / PVE shooter in the sci-fi realism genre and CO-OP indie games</p>
+        <p> - Conducting in-engine validation of gameplay mechanics inside Unreal Engine 5 </p>
+        <p> - Performing functional / smoke / regression tests on PC and consoles (PS5, Xbox Series S/X), incl. Steam & VK Play</p>
+        <p> - Performing API testing (Swagger / Postman) and validate client–server/network scenarios </p>
+        <p> - Verifying compatibility and compliance: controllers, localization, accessibility, UI/UX standards</p>
+        <p> - Creating and maintaining test plans/cases; defining acceptance criteria and critical risk paths </p>
+        <p> - Reporting, prioritizing, and tracking defects in Jira; —-coordinate with Dev, Art, and Product</p>
+        <p> - Debugging issues using logs/crash reports (Sentry) and performance / telemetry tools </p>
+        <p> - Using DevTools, Lens / Kibana / Grafana for error monitoring and identifying bottlenecks</p>
+        <p> - Supporting releases via CI/CD: build test environments, deploy game servers/backends, manage configs and regression after merges</p>
+        <p> - Managing Steamworks releases: migrate builds between Steam branches and track versions</p>
+        <p> - Mentoring teammates and participate in hiring / onboarding</p>
         </TextInfo>
         <MediaInfo>
       <img src={require("../../Images/testing.png")} alt="testing"></img>
@@ -24,19 +26,15 @@ const QA = () => {
         <OptionalInfo>
         <Skill> Unreal Engine 5 </Skill>
         <Skill> PC </Skill>
-        <Skill> PS5 </Skill>
-        <Skill> Xbox </Skill>
-        <Skill> Git </Skill>
-        <Skill> Perforce  </Skill>
-        <Skill> Jira  </Skill>
-        <Skill> Confluence </Skill>
-        <Skill> Figma</Skill>
+        <Skill> PS5/Xbox </Skill>
+        <Skill> Perforce/Git </Skill>
+        <Skill> Jira / Confluence </Skill>
+        <Skill> Jenkins/GitLab </Skill>
+        <Skill> Postman/Swagger API </Skill>
+        <Skill> Lens/Grafana/Kibana </Skill>
+        <Skill> DevTools</Skill>
+        <Skill> Kafka</Skill>
         <Skill> Sentry </Skill>
-        <Skill> Jenkins </Skill>
-        <Skill> Lens </Skill>
-        <Skill> HTML </Skill>
-        <Skill> JS  </Skill>
-        <Skill> CSS </Skill>
         </OptionalInfo>
       </QAWrapper>
     );
