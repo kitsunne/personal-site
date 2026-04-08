@@ -10,31 +10,54 @@ const Blog = () => {
       <Post>
           <Border>
          <Quote> 
-          <b>2020-2021. </b>I had a small hobby - <b>Frontend</b>. This site, as well as a couple of other works, are the result of it. <br></br>
-          <b>My stack:</b> HTML / JS / CSS / React / Redux / Bootstrap / Styled Components /  Jest <br></br>
-          <b>My GitHub:</b> https://github.com/kitsunne <br></br>
-          <b>Demo:</b> <a href ="https://social-network-besocial.netlify.app/" > Social Network</a> and <a href ="https://multifunctional.netlify.app/" > Multifunctional App</a>.
+           <b>2020-2021. </b>I had a small hobby - <b>Frontend</b>. This site, as well as a couple of other works, are the result of it. <br></br>
+           <b>My stack:</b> HTML / JS / CSS / React / Redux / Bootstrap / Styled Components /  Jest <br></br>
+           <b>My GitHub:</b> https://github.com/kitsunne <br></br>
+           <b>Demo:</b> <a href ="https://social-network-besocial.netlify.app/" > Social Network</a> and <a href ="https://multifunctional.netlify.app/" > Multifunctional App</a>.
          </Quote>
           </Border>
         </Post>
         <Post>
-          <Border>
+           <Border>
          <Quote> 
-          <b>2023.</b> Started working as a QA Engineer on a AAA project in Gamedev. <br></br>
+           <b>2023.</b> Started working as a QA Engineer on a AAA project in Gamedev. <br></br>
          </Quote>
           </Border>
         </Post>
         <Post>
-          <Border>
-         <Quote> 
-         <ImageContainer>
-         Short trip to Paris and Normandy.<br></br>
-        <img src={require("../../Images/photo1.jpg")} alt="logo"></img>
-        <img src={require("../../Images/photo2.jpg")} alt="logo"></img>
-        <img src={require("../../Images/photo3.jpg")} alt="logo"></img>
-      </ImageContainer>
-         </Quote>
-          </Border>
+           <Border>
+             <Quote> 
+             <ImageContainer>
+                Short trip to Paris and Normandy.<br></br>
+             <img src={require("../../Images/photo1.jpg")} alt="logo"></img>
+             <img src={require("../../Images/photo2.jpg")} alt="logo"></img>
+             <img src={require("../../Images/photo3.jpg")} alt="logo"></img>
+              </ImageContainer>
+           </Quote>
+           </Border>
+        </Post>
+        <Post>
+           <Border>
+             <Quote> 
+             <ImageContainer>
+                Fencing <br></br>
+             <img src={require("../../Images/mef1.jpg")} alt="logo"></img>
+             <img src={require("../../Images/mef2.jpg")} alt="logo"></img>
+             <img src={require("../../Images/mef3.jpg")} alt="logo"></img>
+              </ImageContainer>
+           </Quote>
+           </Border>
+        </Post>
+        <Post>
+           <Border>
+             <Quote> 
+              <b>2025.</b> Started working as a QA Engineer on CO-OP indie games. <br></br>
+              <ImageContainer>
+                 <StyledLink href="https://store.steampowered.com/app/4193590/Salvation_Denied/" target="_blank" rel="sd"> --Salvation Denied on Steam-- </StyledLink>
+                 <StyledLink href="https://store.steampowered.com/app/3905450/WheelMates/" target="_blank" rel="wm"> --WheelMates on Steam-- </StyledLink>
+              </ImageContainer>
+           </Quote>
+           </Border>
         </Post>
       </Posts>
     </BlogWrapper>
@@ -146,6 +169,29 @@ const ImageContainer = styled.div`
     @media screen and (max-width: 320px) {
       width: 140px;
       align-self: center;
+    }
+  }
+`;
+
+const StyledLink = styled.a`
+  margin: 0 20px;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  color: #4bb49d;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.1rem;
+  letter-spacing: 5px;
+  border-radius: 4px;
+  padding: 5px;
+  font-size: 18px;
+
+
+  &:hover {
+    color: white;
+    transition: all 0.3s linear;
+    span {
+      color: #c863be;
     }
   }
 `;

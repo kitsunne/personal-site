@@ -21,7 +21,7 @@ const QA = () => {
         <p> - Mentoring teammates and participate in hiring / onboarding</p>
         </TextInfo>
         <MediaInfo>
-      <img src={require("../../Images/testing.png")} alt="testing"></img>
+    {/* <img src={require("../../Images/testing.png")} alt="testing"></img> */}
       </MediaInfo>
         <OptionalInfo>
         <Skill> Unreal Engine 5 </Skill>
@@ -102,8 +102,8 @@ const TextInfo = styled.main`
 
     @keyframes blinking {
   50% {
-    color: #f37a53;
-    text-shadow: 0px 0px 29px #f37a53;
+    color: #4bb49d;
+    text-shadow: 0px 0px 29px #4bb49d;
   }
     }
   }
@@ -174,6 +174,7 @@ const OptionalInfo = styled.div`
   `;
 
 const Skill = styled.div`
+color:#f37a53;
 font-weight: bold;
 text-shadow: 0px 0px 29px #4bb49d;
 `;

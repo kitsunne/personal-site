@@ -24,7 +24,7 @@ const Main = () => {
         </p>
         <Speech>
           <Border>
-            <Quote>Hi, I am a Gamedev ronin with 3+ years of experience as QA Engineer on PC/console projects. I am a flexible and quick learner with analytical thinking and good sense of humor. </Quote>
+            <Quote>Hi, I am a Gamedev ronin with 3+ years of experience as QA Engineer on PC/console projects. </Quote>
           </Border>
         </Speech>
       </FieldInfo>
